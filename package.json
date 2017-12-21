@@ -1,0 +1,26 @@
+{
+  "name": "fene",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/andraaspar/fene.git",
+  "author": "András Parditka",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^8.5.2",
+    "ava": "^0.24.0",
+    "del-cli": "^1.1.0",
+    "typescript": "^2.6.2"
+  },
+  "ava": {
+    "files": [
+      "./tests.js"
+    ]
+  },
+  "scripts": {
+    "installDeps": "yarn",
+    "clean": "del-cli ./*.js ./*.d.ts ./*.js.map",
+    "compileJs": "tsc",
+    "test": "ava",
+    "compile": "yarn run installDeps & yarn run clean & yarn run compileJs & yarn run test"
+  }
+}
