@@ -1,6 +1,6 @@
 {
   "name": "fene",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "index.js",
   "repository": "https://github.com/andraaspar/fene.git",
   "author": "András Parditka",
@@ -21,6 +21,7 @@
     "clean": "del-cli ./*.js ./*.d.ts ./*.js.map",
     "compileJs": "tsc",
     "test": "ava",
-    "compile": "yarn run installDeps & yarn run clean & yarn run compileJs & yarn run test"
+    "compile": "yarn run installDeps & yarn run clean & yarn run compileJs & yarn run test",
+    "doit": "yarn run compileJs & node ./doit.js"
   }
 }
